@@ -1,0 +1,17 @@
+@"
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+"@ | Set-Content .gitignore
