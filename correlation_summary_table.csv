@@ -1,6 +1,0 @@
-Comparison,Level,n,Spearman ρ,p-value
-MUSHRA vs SDR,Model,3,1.0000,0.0000e+00
-MUSHRA vs FAD (PANN),Model,3,-1.0000,0.0000e+00
-MUSHRA vs FAD (VGGish),Model,3,-0.5000,0.6667
-SDR vs FAD (PANN),Model,3,-1.0000,0.0000e+00
-SDR vs FAD (VGGish),Model,3,-0.5000,0.6667
