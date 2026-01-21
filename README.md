@@ -62,7 +62,12 @@ This repository contains the complete materials, data, and analysis code for a M
 │   ├── qualtrics_data_analysis.py
 │   └── spearman_correlation.py
 │
+├── qualtrics_survey/          # Exported Qualtrics survey design/flow
+│    ├── MUE_705_Listening_Study.docx
+│    ├── MUE_705_Listening_Study.qsf
+│
 └── environment.yml             # Conda environment specification
+
 ```
 
 ## Installation
