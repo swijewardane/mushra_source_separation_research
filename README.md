@@ -116,6 +116,7 @@ python scripts/qualtrics_data_analysis.py
 python scripts/correlation_analysis.py
 python scripts/spearman_correlation.py
 ```
+***All scripts must be run from the root directory
 
 ## Key Findings
 
