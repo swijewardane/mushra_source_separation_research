@@ -1,4 +1,10 @@
 # MUSHRA Study: Perceptual Evaluation of Music Source Separation Models
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat&logo=python&logoColor=white)
+![librosa](https://img.shields.io/badge/librosa-0.10-darkgreen?style=flat)
+![MIR Eval](https://img.shields.io/badge/MIR_eval-0.8-purple?style=flat)
+![PyTorch](https://img.shields.io/badge/torch-2.5+-maroon?style=flat&logo=pytorch&logoColor=white)
+
+
 
 A perceptual evaluation of various commercial models of music source separation, with a focus on model performance against non-traditional source material.
 
