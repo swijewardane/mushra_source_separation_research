@@ -13,6 +13,12 @@ A perceptual evaluation of various commercial models of music source separation,
 **Program:** Master of Science in Music Engineering Technology  
 **Expected Completion:** Spring 2027
 
+<p align = "center">
+  <img src="figures/mushra_sdr_correlation_models_only.png" alt = "MUSHRA vs. SDR Correlation">
+  <br>
+  <em> Correlation between perceptual ratings (MUSHRA) and objective SDR metrics </em>
+</p>
+
 ## Abstract
 
 This repository contains the complete materials, data, and analysis code for a MUSHRA (MUltiple Stimuli with Hidden Reference and Anchor) listening study evaluating the perceptual performance of three commercial music source separation models: **HTDemucs**, **Demucs v2**, and **Spleeter**. The study focuses on evaluating these models' performance on non-traditional source material, specifically electronic music (dubstep/EDM), comparing subjective listener ratings against objective metrics including SDR (Signal-to-Distortion Ratio) and FAD (Fréchet Audio Distance) scores.
@@ -124,12 +130,6 @@ python scripts/spearman_correlation.py
 ```
 ***All scripts must be run from the root directory
 
-## Key Findings
-
-This study investigates the relationship between subjective perceptual ratings (MUSHRA scores) and objective evaluation metrics (SDR and FAD) for music source separation on non-traditional source material. Correlation analyses examine whether objective metrics reliably predict human perception for electronic music genres.
-
-See the `results/` and `analysis/` directories for detailed findings, statistical analyses, and visualizations.
-
 ## Test Material
 
 The study uses 6 dubstep/EDM tracks selected to represent non-traditional instrumentation:
@@ -156,6 +156,36 @@ Participants rated separated sources on a 0-100 scale in a MUSHRA test administe
 - **BSS Eval:** Computed SDR, SIR, and SAR metrics using `mir_eval`
 - **FAD:** Calculated Fréchet Audio Distance using both VGGish and PANN embeddings
 
+
+## Key Findings
+
+This study investigates the relationship between subjective perceptual ratings (MUSHRA scores) and objective evaluation metrics (SDR and FAD) for music source separation on non-traditional source material, involving 3 representative models: **Demucs v2** (time-domain), **Spleeter** (spectrogram-domain), and **HTDemucs** (hybrid-domain). 
+
+Weighted z-scores of the mushra ratings showed the hybrid model as performing consistently better than either of the single-domain models.
+
+<p align = "center">
+  <img src="figures/mushra_barchart_se.png" alt = "Weighted z-scores of the MUSHRA ratings">
+  <br>
+  <em> Weighted z-scores of the MUSHRA ratings </em>
+</p>
+
+A 3 x 2 ANOVA (Analysis of Variance) analysis on the MUSHRA ratings showed main effects of stem type and model as well as interaction effects, with 'drums' stems being consistently rated higher, and the hybrid model performingly much better on 'bass' stems.
+
+<p align = "center">
+  <img src="figures/mushra_interaction_plot.png" alt = "3 x 2 ANOVA">
+  <br>
+  <em> 3 x 2 ANOVA analysis showed main effects of stem type and model as well as interaction effects </em>
+</p>
+
+A trial-level Spearman-rank correlation was done between the MUSHRA scores and the SDR ratings, showing moderate but insignificant correlation.
+
+<p align = "center">
+  <img src="figures/mushra_sdr_correlation_models_only.png" alt = "MUSHRA vs. SDR Correlation">
+  <br>
+  <em> Correlation between perceptual ratings (MUSHRA) and objective SDR metrics </em>
+</p>
+
+See the `results/`, `analysis/`, and `figures/` directories for more detailed findings, statistical analyses, and visualizations.
 ## Dependencies
 
 Key packages (see `environment.yml` for complete list):
