@@ -33,6 +33,37 @@ This repository contains the complete materials, data, and analysis code for a M
 - **Evaluation Metrics:**
   - Subjective: MUSHRA scores (0-100 scale)
   - Objective: SDR (via BSS Eval), FAD scores (VGGish and PANN embeddings)
+ 
+## Models
+
+Three open-source music source separation models were evaluated, representing distinct architectural paradigms:
+
+| Model | Developer | Architecture | Source |
+|-------|-----------|--------------|--------|
+| **HTDemucs** | Meta AI Research | Hybrid Transformer (time + frequency domain + cross-attention) | [GitHub](https://github.com/adefossez/demucs) |
+| **Demucs v2** | Meta AI Research | Time-domain U-Net with bidirectional LSTM bottleneck | [GitHub](https://github.com/adefossez/demucs) |
+| **Spleeter** | Deezer Research | Spectrogram-domain U-Net (TensorFlow) | [GitHub](https://github.com/deezer/spleeter) |
+
+**HTDemucs** (Hybrid Transformer Demucs) is the fourth-generation model in the Demucs family, integrating multi-branch convolutional modeling with cross-domain transformer attention. It was trained on MUSDB18-HQ plus an additional 800 curated tracks, and represents the current state of the art in the Demucs lineage.
+
+**Demucs v2** is an earlier time-domain variant utilizing a U-Net architecture with bidirectional LSTM bottlenecks. It operates entirely in the waveform domain, in contrast to the hybrid approaches of later versions.
+
+**Spleeter**, developed by Deezer Research and first presented at ISMIR 2019, uses a TensorFlow-based U-Net operating on spectrograms. It was designed with speed and accessibility as primary goals, capable of 4-stem separation at up to 100× real-time on a GPU.
+
+These three models were selected to span the architectural space of source separation approaches: time-domain (Demucs v2), spectrogram-domain (Spleeter), and hybrid-domain with attention (HTDemucs).
+
+## Reproducibility Notes
+
+**HTDemucs** was run using the default `htdemucs` model from the officially maintained
+[adefossez/demucs](https://github.com/adefossez/demucs) repository (model flag `-n htdemucs`).
+
+**Demucs v2** was obtained from the v2 release tree at
+[facebookresearch/demucs/tree/v2](https://github.com/facebookresearch/demucs/tree/v2),
+as linked from the official repository. This is a separate, earlier codebase and
+requires its own environment (see `environment.yml`).
+
+**Spleeter** was installed via [deezer/spleeter](https://github.com/deezer/spleeter)
+using the 4-stem pretrained model.
 
 ## Repository Structure
 
