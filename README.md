@@ -85,6 +85,8 @@ using the 4-stem pretrained model.
 │   ├── nogravity_drums.wav
 │   └── thisfeeling_bass.wav
 │
+├── stimuli_normalized/                    # Normalized stimuli for use in listening study
+│
 ├── results/                    # Analysis results and visualizations
 │   ├── raw_data/              # Raw BSS Eval, FAD, and Qualtrics data
 │   ├── bss_eval_results_processed.csv
