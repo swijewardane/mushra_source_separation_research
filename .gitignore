@@ -1,6 +1,6 @@
 @"
 # Python
-__pycache__/
+__pycache__/https://github.com/swijewardane/mushra_source_separation_research/blob/main/.gitignore
 *.py[cod]
 *$py.class
 *.pyc
