@@ -111,6 +111,7 @@ using the 4-stem pretrained model.
 │    ├── MUE_705_Listening_Study.docx
 │    ├── MUE_705_Listening_Study.qsf
 │
+└── aes_europe_2026_poster.pdf             # Poster of research, presented at AES Europe 2026 Copenhagen
 └── environment.yml             # Conda environment specification
 
 ```
